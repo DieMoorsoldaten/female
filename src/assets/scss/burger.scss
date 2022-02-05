@@ -1,0 +1,54 @@
+.burger {
+    padding: 5px 0 11px;
+    position: relative;
+    z-index: 10;
+    background: white;
+    border: 0;
+    z-index: 10;
+
+
+    .toggler-icon {
+        display: inline-block;
+        position: relative;
+        width: 32px;
+        height: 2px;
+        background: $black;
+        transition: $t-ease;
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            width: 32px;
+            height: 2px;
+            background: $black;
+            left: 0;
+            top: -10px;
+            transition: $t-ease;
+        }
+
+        &:after {
+            top: 10px;
+        }
+    }
+
+
+}
+
+.btn-active {
+    .toggler-icon {
+        background: transparent;
+
+        &:before,
+        &:after {
+            background: $black;
+            top: 0;
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            top: 0;
+            transform: rotate(-45deg);
+        }
+    }
+}

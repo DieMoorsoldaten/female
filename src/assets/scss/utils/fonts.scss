@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+@font-face {
+    font-family: 'G300';
+    src: url('/assets/fonts/subset-Gilroy-Light.woff2') format('woff2'),
+        url('/assets/fonts/subset-Gilroy-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Druk';
+    src: url('/assets/fonts/subset-DrukCyr-Medium.woff2') format('woff2'),
+        url('/assets/fonts/subset-DrukCyr-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'G600';
+    src: url('/assets/fonts/subset-Gilroy-SemiBold.woff2') format('woff2'),
+        url('/assets/fonts/subset-Gilroy-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'G700';
+    src: url('/assets/fonts/subset-Gilroy-Bold.woff2') format('woff2'),
+        url('/assets/fonts/subset-Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'G400';
+    src: url('/assets/fonts/subset-Gilroy-Regular.woff2') format('woff2'),
+        url('/assets/fonts/subset-Gilroy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GThin';
+    src: url('/assets/fonts/Gilroy-Thin.woff2') format('woff2'),
+        url('/assets/fonts/Gilroy-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+

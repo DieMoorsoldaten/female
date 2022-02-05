@@ -1,0 +1,90 @@
+.form2 {
+
+    padding-top: 16px;
+    padding-bottom: 151px;
+
+    h3 {
+        font-size: 38px;
+        line-height: 38px;
+        font-family: 'Druk';
+        margin-bottom: 32px;
+        color: $dark;
+
+        &+p {
+            font-size: 16px;
+            line-height: 25px;
+            font-family: 'G400';
+            margin-bottom: 32px;
+            color: $dark;
+
+            @media (min-width: 500px) and (max-width:767px) {
+                max-width: 80%;
+            }
+        }
+    }
+
+    input,
+    input::placeholder {
+        font-family: 'G400';
+    }
+
+    input,
+    input::placeholder {
+
+        line-height: 21px;
+    }
+
+    input:focus {
+        box-shadow: none;
+        border: 1px solid #CDCAF2;
+    }
+
+    input {
+        padding: 13px 21px 14px;
+        font-size: 14px;
+        height: auto;
+        border-radius: 6px;
+        border: 1px solid #CDCAF2;
+        box-sizing: border-box;
+        max-width: 280px;
+
+        @media (max-width: 374px){
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    input::placeholder {
+        color: #CDCAF2;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    &-group {
+        margin-bottom: 11px;
+
+    }
+
+    &-btn {
+        font-size: 16px;
+        line-height: 25px;
+        font-family: 'G600';
+        background: $violet;
+        color: $white;
+        padding: 10px 21px;
+        border-radius: 8px;
+
+    }
+
+    form>div{
+        padding-left: 40px;
+        max-width: 280px;
+
+        @media (max-width: 374px){
+            padding-left: 0;
+            margin: 0 auto;
+        }
+    
+    }
+
+}

@@ -1,0 +1,17 @@
+.mobile-btn{
+    padding: 11px 16px;
+    font-family: "G600";
+    font-size: 14px;
+    background: $violet;
+    color: $white;
+    border-radius: 10px;
+
+    @media (max-width: 375px){
+        font-size: calc( 14 / 16 * 1rem );
+        padding: calc( 11 * 100vw /375 ) calc( 16 * 100vw /375 );
+    }
+
+    &:focus{
+        color: $white;
+    }
+}

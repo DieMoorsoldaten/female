@@ -1,0 +1,48 @@
+.header-main{
+    background: url(/assets/img/header.png) no-repeat;
+    background-position: bottom;
+    background-size: cover;
+
+    min-height: 695px;
+    padding: 32px 0;
+
+    h1{
+        font-size: 68px;
+        line-height: 68px;
+        font-family: 'Druk';
+        color: $rose;
+
+        @media (max-width: 375px){
+            font-size: calc( 68 * 100vw /375 );
+            line-height: calc( 68 * 100vw /375 );
+        }
+    }
+
+    p{
+        font-family: 'G300';
+        font-size: 25px;
+        line-height: 25px;
+        color: $white;
+        margin-bottom: 32px;
+
+        @media (max-width: 375px){
+            font-size: calc( 25 * 100vw /375 );
+            line-height: calc( 25 * 100vw /375 );
+        }
+    }
+
+    a{
+        color: $black;
+        font-size: 16px;
+        text-decoration: none;
+        font-family: 'G600';
+        background: $rose;
+        display: inline-block;
+        padding: 17px 29px;
+        border-radius: 8px;
+
+        &:focus{
+            color: $black;
+        }
+    }
+}

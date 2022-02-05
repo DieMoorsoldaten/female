@@ -1,0 +1,31 @@
+.main-content {
+
+    padding: 96px 0;
+
+    h3 {
+        font-family: 'Druk';
+        font-size: 64px;
+        margin-bottom: 58px;
+    }
+
+    svg{
+        display: block;
+        margin: 0 auto 14px;
+    }
+
+    &-top{
+        margin-bottom: 113px;
+    }
+
+    &-top>div{
+        padding: 20px;
+        max-width: 350px;
+        margin: 0 auto;
+
+        p{
+            font-family: 'G400';
+            font-size: 16px;
+            line-height: 21px;
+        }
+    }
+}

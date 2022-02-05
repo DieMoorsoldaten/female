@@ -1,0 +1,60 @@
+.main-content-center {
+
+    color: $dark;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    figure {
+        background: $rose;
+        width: 100%;
+        margin-bottom: 16px;
+
+        @media (max-width: 375px) {
+            margin-bottom: calc(16 * 100vw / 375);
+        }
+    }
+
+    &>div+div {
+        border-left: 2px solid #182F43;
+
+        @media (max-width: 375px) {
+            border-left: calc(2 * 100vw / 375) solid #182F43;
+        }
+    }
+
+    &__article div {
+        padding: 16px 0 40px;
+        max-width: 187px;
+
+        @media (max-width: 375px) {
+            max-width: calc(187 * 100vw / 375);
+            padding: calc(16 * 100vw / 375) 0 calc(40 * 100vw / 375);
+            ;
+        }
+
+        h4 {
+            font-family: 'Druk';
+            font-size: 38px;
+            text-transform: uppercase;
+
+            @media (max-width: 375px) {
+                font-size: calc(38 / 16 * 1rem);
+            }
+        }
+
+        p {
+            font-family: 'G400';
+            font-size: 14px;
+            line-height: 20px;
+
+            @media (max-width: 375px) {
+                font-size: calc(14 / 16 * 1rem);
+                line-height: calc(20 / 16 * 1rem);
+            }
+        }
+    }
+}

@@ -1,0 +1,83 @@
+.header-menu {
+    font-family: 'g600';
+    font-size: 22px;
+
+    a {
+        color: $black;
+        transition: $t-ease;
+    }
+
+    a:hover {
+        color: $violet;
+    }
+
+    &-ul{
+        overflow: auto;
+    }
+
+    &-ticket {
+        background: $violet;
+        padding: 0 8px;
+        border-radius: 8px;
+
+        .nav-link {
+            color: $white;
+        }
+    }
+
+    &-ticket__drop {
+        background: $violet;
+        padding: 6px 20px;
+        border-radius: 8px;
+        font-size: 17px;
+
+        .nav-link {
+            color: $white;
+
+            &:focus{
+                color: $white;
+            }
+        }
+    }
+
+    span {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+
+    @media (max-width: 991px) {
+        position: fixed;
+        transition: all .5s ease;
+        z-index: 5;
+        background: $white;
+        right: -100%;
+        top: 0;
+        max-width: 375px;
+        padding: 27px 15px 102px;
+        box-sizing: border-box;
+
+        .nav-item{
+            margin: 0 auto 24px;
+        }
+
+        .nav-link{
+            padding: 8px;
+        }
+
+        .soc-icon{
+            padding: 32px 0 64px;
+        }
+    }
+
+    @media (max-width: 374px) {
+        min-width: 100%;
+    }
+
+}
+
+.btn-active .header-menu{
+    @media (max-width: 991px) {
+        right: 0;
+    }
+}

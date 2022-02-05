@@ -1,0 +1,29 @@
+.tickets{
+    
+    padding: 96px 0 69px;
+    color: $dark;
+
+    @media (max-width: 375px) {
+        padding: calc( 96 * 100vw / 375) 0 calc( 69 * 100vw / 375);
+    }
+
+    svg{
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+
+    h2{
+        font-size: 73px;
+        z-index: 5;
+        font-family: 'Druk';
+        margin-bottom: 64px;
+
+        @media (max-width: 375px) {
+            font-size: calc(73 / 16 * 1rem);
+            margin-bottom: calc( 64 * 100vw / 375);
+        }
+    }
+
+}
