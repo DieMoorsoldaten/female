@@ -2,6 +2,10 @@
 
     color: $dark;
 
+    @media ($xl) {
+        justify-content: space-between;
+    }
+
     img {
         width: 100%;
         height: auto;
@@ -12,9 +16,18 @@
         background: $rose;
         width: 100%;
         margin-bottom: 16px;
+        order: 2;
 
         @media (max-width: 375px) {
             margin-bottom: calc(16 * 100vw / 375);
+        }
+
+        @media ($md) {
+            margin-bottom: 32px;
+        }
+
+        @media ($xl) {
+            background: transparent;
         }
     }
 
@@ -23,6 +36,10 @@
 
         @media (max-width: 375px) {
             border-left: calc(2 * 100vw / 375) solid #182F43;
+        }
+
+        @media ($xl) {
+            border-left: 0;
         }
     }
 
@@ -33,16 +50,21 @@
         @media (max-width: 375px) {
             max-width: calc(187 * 100vw / 375);
             padding: calc(16 * 100vw / 375) 0 calc(40 * 100vw / 375);
-            ;
+        }
+
+        @media ($xl) {
+            max-width: 285px;
         }
 
         h4 {
             font-family: 'Druk';
             font-size: 38px;
             text-transform: uppercase;
+            margin-bottom: 12px;
 
             @media (max-width: 375px) {
                 font-size: calc(38 / 16 * 1rem);
+                margin-bottom: calc(12 * 100vw / 375);
             }
         }
 
@@ -55,6 +77,23 @@
                 font-size: calc(14 / 16 * 1rem);
                 line-height: calc(20 / 16 * 1rem);
             }
+
+            @media ($md) {
+                font-size: 16px;
+                line-height: 25px;
+            }
+        }
+    }
+
+
+    @media ($xl) {
+
+        &-order-1 {
+            order: 1;
+        }
+
+        &-order-2 {
+            order: 3;
         }
     }
 }

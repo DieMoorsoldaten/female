@@ -1,0 +1,18 @@
+.footer-copy{
+
+    padding: 28px 0;
+    border-top: 1px solid #EBF2F8;
+    font-size: 12px;
+    line-height: 16px;
+    color: $white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+
+    @media (max-width: 375px) {
+        font-size: calc(12 / 16 * 1rem);
+        line-height: calc(16 / 16 * 1rem);
+        padding: calc(28 * 100vw / 375) 0;
+        border-top: calc(1 * 100vw / 375) solid #EBF2F8;
+    }
+
+}

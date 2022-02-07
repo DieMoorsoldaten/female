@@ -1,0 +1,196 @@
+.partners {
+
+    padding: 146px 0 86px;
+    overflow: hidden;
+
+    @media (max-width: 375px) {
+        padding: calc(146 * 100vw / 375) 0 calc(86 * 100vw / 375);
+    }
+
+    @media ($md) {
+        padding: 146px 0 118px;
+    }
+
+    @media ($xl) {
+        padding: 246px 0 118px;
+    }
+
+    svg {
+        left: 0;
+        top: 20px;
+        right: 0;
+        z-index: -1;
+
+        @media (max-width: 375px) {
+            top: calc(20 * 100vw / 375);
+        }
+    }
+
+    h2 {
+        z-index: 5;
+        font-family: 'Druk';
+        font-size: 92px;
+        line-height: 92px;
+        color: $dark;
+
+        @media (max-width: 375px) {
+            font-size: calc(92 / 16 * 1rem);
+            line-height: calc(92 / 16 * 1rem);
+        }
+    }
+
+    &-descr {
+        z-index: 5;
+        color: #323232;
+        font-size: 16px;
+        line-height: 18px;
+        font-family: 'G400';
+        margin-bottom: 28px;
+
+        @media (max-width: 375px) {
+            font-size: calc(16 / 16 * 1rem);
+            line-height: calc(18 / 16 * 1rem);
+            margin-bottom: calc(28 * 100vw / 375);
+        }
+    }
+
+    h4 {
+        font-family: 'G700';
+        font-size: 28px;
+        line-height: 28px;
+        color: #323232;
+
+        @media (max-width: 375px) {
+            font-size: calc(28 / 16 * 1rem);
+            line-height: calc(28 / 16 * 1rem);
+        }
+
+        &+div {
+            margin-bottom: 102px;
+
+            @media (max-width: 375px) {
+                margin-bottom: calc(102 * 100vw / 375);
+            }
+
+            @media ($md) {
+                margin-bottom: 119px;
+            }
+
+            @media ($xl) {
+                margin-bottom: 223px;
+            }
+        }
+
+        &+div>div {
+            border: 2px solid $violet;
+            max-width: 458px;
+            border-radius: 7px;
+            height: 232px;
+            margin-bottom: 30px;
+
+            @media (max-width: 375px) {
+                border: calc(2 * 100vw / 375) solid $violet;
+                border-radius: calc(7 * 100vw / 375);
+                height: calc(232 * 100vw / 375);
+                margin-bottom: calc(30 * 100vw / 375);
+            }
+
+            svg {
+                margin-bottom: 17px;
+
+                @media (max-width: 375px) {
+                    margin-bottom: calc(17 * 100vw / 375);
+                }
+            }
+
+            a {
+                display: inline-block;
+                font-size: 22px;
+                line-height: 30px;
+                color: #323232;
+
+                @media (max-width: 375px) {
+                    font-size: calc(22 / 16 * 1rem);
+                    line-height: calc(30 / 16 * 1rem);
+                }
+            }
+
+            p {
+                margin-top: 13px;
+                color: #646464;
+                font-family: 'G400';
+                font-size: 22px;
+                line-height: 26px;
+
+                @media (max-width: 375px) {
+                    font-size: calc(22 / 16 * 1rem);
+                    line-height: calc(26 / 16 * 1rem);
+                    margin-top: calc(13 * 100vw / 375);
+                }
+            }
+        }
+
+
+    }
+
+    &-contacts {
+        z-index: 5;
+
+        a{
+            transition: $t-ease;
+        }
+
+        @media (min-width: 992px) {
+            a:hover {
+                text-decoration: none;
+                color: $violet;
+            }
+        }
+    }
+
+    h3 {
+        color: $rose;
+        margin-bottom: 40px;
+        font-size: 64px;
+        line-height: 64px;
+        font-family: 'Druk';
+        z-index: 5;
+
+        @media (max-width: 375px) {
+            font-size: calc(64 / 16 * 1rem);
+            line-height: calc(64 / 16 * 1rem);
+            margin-bottom: calc(40 * 100vw / 375);
+        }
+
+        &+ul a {
+            display: inline-block;
+            width: 49px;
+            height: 49px;
+
+            @media (max-width: 375px) {
+                width: calc(49 / 16 * 1rem);
+                height: calc(49 / 16 * 1rem);
+            }
+
+            svg {
+                @media (max-width: 375px) {
+                    width: calc(49 / 16 * 1rem);
+                    height: calc(49 / 16 * 1rem);
+                }
+            }
+
+        }
+    }
+
+    ul {
+        z-index: 5;
+    }
+
+    li {
+        padding: 0 16px;
+
+        @media (max-width: 375px) {
+            padding: 0 calc(16 * 100vw / 375);
+        }
+    }
+}

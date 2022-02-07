@@ -1,3 +1,23 @@
 .soc-icon-f{
     margin: 0 40px;
+
+    @media (max-width: 375px) {
+        margin: 0 calc( 40 * 100vw / 375);
+    }
+
+    @media (min-width: 992px) {
+        &:hover path{
+            fill: $rose;
+            transition: $t-ease;
+        }
+    }
+}
+
+.soc-icon{
+    @media (min-width: 992px) {
+        li:hover path{
+            fill: $rose;
+            transition: $t-ease;
+        }
+    }
 }

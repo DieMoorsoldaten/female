@@ -1,0 +1,95 @@
+.footer-ul{
+    
+    color: $dark;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    transform: translatey(-75px);
+
+    @media (max-width: 375px) {
+        transform: translatey(-6%);
+    }
+
+    @media ($md) and (max-width: 1199px){
+        max-width: 768px;
+        margin: 0 auto;
+        flex-direction: row;
+    }
+
+    @media ($md) {
+        margin: 0 auto;
+        flex-direction: row;
+    }
+
+    li{
+        width: 277px;
+        height: 240px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background: $white;
+        margin-bottom: 2px;
+
+        @media (max-width: 375px) {
+            width: calc( 277 * 100vw / 375);
+            height: calc( 240 * 100vw / 375);
+            margin-bottom: calc( 2 * 100vw / 375);
+        }
+
+        @media ($md) {
+            width: 331px;
+            margin-right: 2px;
+        }
+        
+        @media ($xl) {
+            flex: 0 1 331px;
+            margin-right: 0;
+        }
+
+        h5{
+            font-family: 'G600';
+            font-size: 22px;
+            line-height: 35px;
+            margin-bottom: 14px;
+
+            @media (max-width: 375px) {
+                font-size: calc(22 / 16 * 1rem);
+                line-height: calc(35 / 16 * 1rem);
+                margin-bottom: calc( 14 * 100vw / 375);
+            }
+        }
+
+        p, a{
+            font-family: 'G400';
+            font-size: 16px;
+            line-height: 26px;
+            transition: $t-ease;
+
+            @media (max-width: 375px) {
+                font-size: calc(16 / 16 * 1rem);
+                line-height: calc(26 / 16 * 1rem);
+            }
+
+            @media (min-width: 992px) {
+                &:hover {
+                    color: $violet;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        a{
+            display: inline-block;
+            color: $dark;
+        }
+    }
+
+    svg{
+        display: block;
+        margin: 0 auto 13px;
+
+        @media (max-width: 375px) {
+            margin: 0 auto calc( 13 * 100vw / 375);
+        }
+    }
+}

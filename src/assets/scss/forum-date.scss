@@ -1,0 +1,102 @@
+.forum-date {
+
+    background: linear-gradient(to bottom, $white 80%, $violet 80%);
+    color: $dark;
+    padding-top: 96px;
+
+    @media (max-width: 375px) {
+        padding-top: calc(96 * 100vw / 375);
+    }
+
+    @media ($xl) {
+        background: linear-gradient(to bottom, $white 75%, $violet 75%);
+    }
+
+    h3 {
+        font-family: 'Druk';
+        font-size: 64px;
+        line-height: 64px;
+        margin-bottom: 32px;
+
+
+        @media (max-width: 375px) {
+            font-size: calc(64 / 16 * 1rem);
+            line-height: calc(64 / 16 * 1rem);
+            margin-bottom: calc(32 * 100vw / 375);
+        }
+    }
+
+    p {
+        font-family: 'G400';
+        font-size: 16px;
+        line-height: 25px;
+        width: 343px;
+        margin: 0 auto 32px;
+
+        @media (max-width: 375px) {
+            font-size: calc(16 / 16 * 1rem);
+            line-height: calc(25 / 16 * 1rem);
+            margin: 0 auto calc(32 * 100vw / 375);
+            width: calc(343 * 100vw / 375);
+        }
+
+        @media ($md) {
+            margin: 0 auto 40px;
+        }
+
+        @media ($xl) {
+            width: 434px;
+        }
+    }
+
+    a {
+        color: $white;
+        font-size: 16px;
+        margin-bottom: 23px;
+        border-radius: 8px;
+        background: $violet;
+        display: inline-block;
+        padding: 17px 18px 17px 20px;
+        transition: $t-ease;
+        font-family: 'G600';
+
+        @media (max-width: 375px) {
+            padding: calc(17 * 100vw / 375) calc(18 * 100vw / 375) calc(17 * 100vw / 375) calc(20 * 100vw / 375);
+            margin-bottom: calc(23 * 100vw / 375);
+        }
+
+        @media ($md) {
+            margin-bottom: 40px;
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                background: $rose;
+                text-decoration: none;
+            }
+        }
+
+        svg {
+            margin-right: 5px;
+
+            @media (max-width: 375px) {
+                margin-right: calc(5 * 100vw / 375);
+            }
+        }
+    }
+
+    figure {
+
+        img {
+            min-width: 100%;
+            height: auto;
+
+            @media ($xl) {
+                display: inline-block;
+                min-width: 598px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+}

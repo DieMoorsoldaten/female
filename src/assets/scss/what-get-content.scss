@@ -1,0 +1,50 @@
+.what-get-content{
+    padding: 64px 16px;
+
+    @media (max-width: 375px) {
+        padding: calc( 64 * 100vw / 375) calc( 16 * 100vw / 375);
+    }
+
+    @media ($md) {
+        padding: 32px 16px 96px;
+    }
+
+    @media ($xl) {
+        padding: 0 16px;
+        margin-top: -85px;
+    }
+
+    svg{
+        margin-top: 15px;
+
+        @media (max-width: 375px) {
+            margin-top: calc( 15 * 100vw / 375);
+        }
+        
+    }
+
+    p{
+        font-family: 'G600';
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 32px;
+
+        @media (max-width: 375px) {
+            font-size: calc(22 / 16 * 1rem);
+            line-height: calc(26 / 16 * 1rem);
+            margin-bottom: calc( 32 * 100vw / 375);
+        }
+
+        span{
+            padding-left: 12px;
+
+            @media (max-width: 375px) {
+                padding-left: calc( 12 * 100vw / 375);
+            }
+
+            @media ($xl) {
+                padding-left: 0;
+            }
+        }
+    }
+}

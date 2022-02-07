@@ -3,6 +3,20 @@
     padding-top: 16px;
     padding-bottom: 151px;
 
+    @media (max-width: 375px) {
+        padding-top: calc(16 * 100vw / 375);
+        padding-bottom: calc(151 * 100vw / 375);
+    }
+
+    @media ($md) {
+        padding-bottom: 192px;
+    }
+
+    @media ($xl) {
+        padding-bottom: 256px;
+        justify-content: center;
+    }
+
     h3 {
         font-size: 38px;
         line-height: 38px;
@@ -10,12 +24,24 @@
         margin-bottom: 32px;
         color: $dark;
 
+        @media (max-width: 375px) {
+            font-size: calc(38 * 100vw /375);
+            line-height: calc(38 * 100vw /375);
+            margin-bottom: calc(32 * 100vw / 375);
+        }
+
         &+p {
             font-size: 16px;
             line-height: 25px;
             font-family: 'G400';
             margin-bottom: 32px;
             color: $dark;
+
+            @media (max-width: 375px) {
+                font-size: calc(16 * 100vw /375);
+                line-height: calc(25 * 100vw /375);
+                margin-bottom: calc(32 * 100vw / 375);
+            }
 
             @media (min-width: 500px) and (max-width:767px) {
                 max-width: 80%;
@@ -32,11 +58,19 @@
     input::placeholder {
 
         line-height: 21px;
+
+        @media (max-width: 375px) {
+            line-height: calc(21 * 100vw /375);
+        }
     }
 
     input:focus {
         box-shadow: none;
         border: 1px solid #CDCAF2;
+
+        @media (max-width: 375px) {
+            border: calc(1 * 100vw / 375) solid #CDCAF2;
+        }
     }
 
     input {
@@ -46,23 +80,37 @@
         border-radius: 6px;
         border: 1px solid #CDCAF2;
         box-sizing: border-box;
-        max-width: 280px;
+        width: 280px;
 
-        @media (max-width: 374px){
+        @media (max-width: 374px) {
             margin-left: auto;
             margin-right: auto;
+            font-size: calc(14 * 100vw /375);
+            padding: calc(13 * 100vw / 375) calc(21 * 100vw / 375) calc(14 * 100vw / 375);
+            border-radius: calc(6 * 100vw / 375);
+            border: calc(1 * 100vw / 375) solid #CDCAF2;
+            width: calc(280 * 100vw / 375);
         }
     }
+
 
     input::placeholder {
         color: #CDCAF2;
         font-size: 14px;
         line-height: 21px;
+
+        @media (max-width: 375px) {
+            font-size: calc(14 / 16 * 1rem);
+            line-height: calc(21 / 16 * 1rem);
+        }
     }
 
     &-group {
         margin-bottom: 11px;
 
+        @media (max-width: 375px) {
+            margin-bottom: calc(11 * 100vw / 375);
+        }
     }
 
     &-btn {
@@ -73,18 +121,35 @@
         color: $white;
         padding: 10px 21px;
         border-radius: 8px;
+        transition: $t-ease;
 
+        @media (max-width: 375px) {
+            font-size: calc(16 / 16 * 1rem);
+            line-height: calc(25 / 16 * 1rem);
+            padding: calc(10 * 100vw / 375) calc(21 * 100vw / 375);
+            border-radius: calc(8 * 100vw / 375);
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                background: $rose;
+            }
+        }
     }
 
-    form>div{
+    form>div {
         padding-left: 40px;
-        max-width: 280px;
+        width: 280px;
 
-        @media (max-width: 374px){
+        @media (max-width: 374px) {
             padding-left: 0;
             margin: 0 auto;
+            width: calc(280 * 100vw / 375);
         }
-    
+
+        @media ($xl) {
+            padding-left: 0;
+        }
     }
 
 }

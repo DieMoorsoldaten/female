@@ -2,6 +2,10 @@
 
     color: $white;
 
+    @media ($md) {
+        color: $dark;
+    }
+
     img {
         width: 100%;
         height: auto;
@@ -14,8 +18,18 @@
         left: 0;
         right: 0;
 
+        @media ($md) {
+            bottom: 24px;
+            right: 16px;
+            left: auto;
+        }
+
+        @media ($xl) {
+            right: 0;
+        }
+
         @media (max-width: 375px) {
-            padding-bottom: calc( 38 * 100vw / 375);
+            padding-bottom: calc(38 * 100vw / 375);
         }
 
         h2 {
@@ -28,14 +42,27 @@
             @media (max-width: 375px) {
                 font-size: calc(90 / 16 * 1rem);
                 line-height: calc(90 / 16 * 1rem);
-                margin-bottom: calc( 32 * 100vw / 375);
+                margin-bottom: calc(32 * 100vw / 375);
+            }
+
+            @media ($xl) {
+                font-size: 92px;
+                line-height: 92px;
             }
         }
 
         div {
 
-            max-width: 330px;
+            width: 330px;
             margin: 0 auto;
+
+            @media (max-width: 375px) {
+                width: calc(330 * 100vw / 375);
+            }
+
+            @media ($xl) {
+                width: 570px;
+            }
 
             p {
                 font-family: 'G300';
@@ -45,6 +72,10 @@
                 @media (max-width: 375px) {
                     font-size: calc(18 / 16 * 1rem);
                     line-height: calc(21 / 16 * 1rem);
+                }
+
+                @media ($xl) {
+                    width: 570px;
                 }
             }
 
@@ -56,8 +87,27 @@
             margin-top: 16px;
 
             @media (max-width: 375px) {
-                margin-top: calc( 20 * 100vw / 375);
+                margin-top: calc(20 * 100vw / 375);
             }
+
+            @media ($md) {
+                margin-top: 114px;
+                font-size: 16px;
+
+                &+p {
+                    font-size: 16px;
+                }
+            }
+
+            @media ($xl) {
+                margin-top: 200px;
+            }
+        }
+    }
+
+    &-wrapper {
+        @media ($md) {
+            position: relative;
         }
     }
 

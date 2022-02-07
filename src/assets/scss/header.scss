@@ -1,12 +1,32 @@
-.header{
+.header {
 
     position: relative;
-    
-    nav{
+
+    nav {
         padding: 10px 16px;
+
+        @media (max-width: 375px) {
+            padding: calc(10 * 100vw / 375) calc(16 * 100vw / 375);
+
+        }
+
+        @media ($md) {
+            padding: 18px 16px;
+        }
+
+        @media ($xl) {
+            padding: 0 16px;
+        }
     }
 }
 
-.navbar-brand{
+.navbar-brand {
     z-index: 1;
+}
+
+.navbar-expand-lg .navbar-nav .header-menu-ticket__drop .nav-link {
+
+    @media ($md) {
+        padding-left: 20px;
+    }
 }

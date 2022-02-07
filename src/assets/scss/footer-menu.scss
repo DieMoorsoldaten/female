@@ -1,0 +1,150 @@
+.footer-menu {
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    @media (max-width: 375px) {
+        padding-top: calc(30 * 100vw / 375);
+        padding-bottom: calc(30 * 100vw / 375);
+    }
+
+    @media ($md) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+    }
+
+    @media ($xl) {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    @media ($xl) {
+        padding-top: 76px;
+    }
+
+    ul {
+        padding-top: 16px;
+
+        @media (max-width: 375px) {
+            padding-top: calc(16 * 100vw / 375);
+        }
+
+        @media ($xl) {
+            padding-top: 0;
+        }
+    }
+
+    li {
+        color: $white;
+        font-family: 'G600';
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 12px;
+
+        @media (max-width: 375px) {
+            font-size: calc(18 / 16 * 1rem);
+            line-height: calc(28 / 16 * 1rem);
+            margin-bottom: calc(12 * 100vw / 375);
+        }
+    }
+
+    a {
+        color: #f3f3f3;
+        font-family: 'G400';
+        font-size: 14px;
+        line-height: 16px;
+        display: inline-block;
+        padding: 2px 0;
+        transition: $t-ease;
+
+        @media (max-width: 375px) {
+            font-size: calc(14 / 16 * 1rem);
+            line-height: calc(16 / 16 * 1rem);
+            padding: calc(2 * 100vw / 375) 0;
+        }
+
+        @media (min-width: 992px) {
+            &:hover{
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+
+    .footer-menu-title {
+        font-family: 'Druk';
+        font-size: 34px;
+        margin-bottom: 32px;
+
+        @media (max-width: 375px) {
+            font-size: calc(34 / 16 * 1rem);
+            margin-bottom: calc(32 * 100vw / 375);
+        }
+
+        @media ($xl) {
+            margin-bottom: 23px;
+        }
+    }
+
+    &-social {
+
+        li {
+            margin-right: 24px;
+            transition: $t-ease;
+
+            @media (max-width: 375px) {
+                margin-right: calc(24 * 100vw / 375);
+            }
+
+            @media ($xl) {
+                margin-right: 10px;
+            }
+
+            @media (min-width: 992px) {
+
+                path {
+                    transition: $t-ease;
+                }
+
+                &:hover path {
+                    fill: $white;
+                }
+
+            }
+
+        }
+    }
+
+    svg {
+        margin-right: 16px;
+
+        @media (max-width: 375px) {
+            margin-right: calc(16 * 100vw / 375);
+        }
+    }
+
+    &-logo {
+        margin-bottom: 32px;
+
+        @media (max-width: 375px) {
+            margin-bottom: calc(32 * 100vw / 375);
+        }
+
+        @media ($xl) {
+            margin-bottom: 0;
+        }
+    }
+
+    &-helper {
+
+        li {
+            @media ($xl) {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+}

@@ -1,7 +1,7 @@
 .ticket-block {
     position: relative;
     z-index: 10;
-    max-width: 206px;
+    width: 206px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
     background: $white;
@@ -11,10 +11,28 @@
     color: $dark;
     font-family: 'G400';
 
+    @media (max-width: 375px) {
+        width: calc(206 * 100vw / 375);
+        border-radius: calc(8 * 100vw / 375);
+        margin: 0 auto calc(8 * 100vw / 375);
+        padding: calc(23 * 100vw / 375) 0 calc(29 * 100vw / 375) calc(10 * 100vw / 375);
+    }
+
+    @media ($md) {
+        height: 485px;
+        margin: 0 10px 32px;
+    }
+
     h4 {
         padding: 0 0 0 4px;
         font-size: 16px;
         margin-bottom: 4px;
+
+        @media (max-width: 375px) {
+            font-size: calc(16 / 16 * 1rem);
+            margin-bottom: calc(4 * 100vw / 375);
+            padding: 0 0 0 calc(4 * 100vw / 375);
+        }
     }
 
     &-price {
@@ -22,12 +40,24 @@
         line-height: 16px;
         margin-bottom: 14px;
         padding: 0 0 0 6px;
+
+        @media (max-width: 375px) {
+            font-size: calc(12 / 16 * 1rem);
+            line-height: calc(16 / 16 * 1rem);
+            margin-bottom: calc(14 * 100vw / 375);
+            padding: 0 0 0 calc(6 * 100vw / 375);
+        }
     }
 
     &-span {
         font-family: 'G600';
         font-size: 38px;
         line-height: 52px;
+
+        @media (max-width: 375px) {
+            font-size: calc(38 / 16 * 1rem);
+            line-height: calc(52 / 16 * 1rem);
+        }
     }
 
     &-descr {
@@ -35,6 +65,13 @@
         line-height: 21px;
         padding: 0 0 0 4px;
         margin-bottom: 24px;
+
+        @media (max-width: 375px) {
+            font-size: calc(14 / 16 * 1rem);
+            line-height: calc(21 / 16 * 1rem);
+            margin-bottom: calc(24 * 100vw / 375);
+            padding: 0 0 0 calc(4 * 100vw / 375);
+        }
     }
 
     h5 {
@@ -43,8 +80,22 @@
         font-family: 'G600';
         margin-bottom: 20px;
 
+        @media (max-width: 375px) {
+            font-size: calc(18 / 16 * 1rem);
+            line-height: calc(28 / 16 * 1rem);
+            margin-bottom: calc(20 * 100vw / 375);
+        }
+
         &+div {
             margin-bottom: 50px;
+
+            @media (max-width: 375px) {
+                margin-bottom: calc(50 * 100vw / 375);
+            }
+
+            @media ($md) {
+                margin-bottom: 0;
+            }
         }
 
         &+div p {
@@ -54,8 +105,19 @@
             margin-bottom: 17px;
             display: flex;
 
+            @media (max-width: 375px) {
+                font-size: calc(14 / 16 * 1rem);
+                line-height: calc(14 / 16 * 1rem);
+                margin-bottom: calc(17 * 100vw / 375);
+                padding: 0 0 0 calc(6 * 100vw / 375);
+            }
+
             svg {
                 margin-right: 12px;
+
+                @media (max-width: 375px) {
+                    margin-right: calc(12 * 100vw / 375);
+                }
             }
 
             &:last-child {
@@ -72,31 +134,72 @@
         font-family: 'G600';
         background: $violet;
         border-radius: 8px;
+        transition: $t-ease;
+
+        @media (max-width: 375px) {
+            padding: calc(10 * 100vw / 375) calc(28 * 100vw / 375);
+            border-radius: calc(8 * 100vw / 375);
+        }
+
+        @media ($md) {
+            margin: 0;
+            width: 182px;
+            padding: 10px 26px;
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                background: $rose;
+                text-decoration: none;
+                color: $white;
+            }
+        }
     }
 
     &-special {
         background: $violet;
         color: $white;
 
+
+
         .ticket-block__btn {
             background: $rose;
+
+            @media (min-width: 992px) {
+                &:hover {
+                    background: $white;
+                    text-decoration: none;
+                    color: $violet;
+                }
+            }
         }
 
-        .old-price, .old-price-cost{
+        .old-price,
+        .old-price-cost {
             text-decoration: line-through;
             color: $rose;
         }
 
-        .old-price{
+        .old-price {
             font-family: 'G600';
             font-size: 20px;
             line-height: 40px;
+
+            @media (max-width: 375px) {
+                font-size: calc(20 / 16 * 1rem);
+                line-height: calc(40 / 16 * 1rem);
+                padding: 0 calc(20 * 100vw / 375);
+            }
         }
 
-        .old-price-cost{
+        .old-price-cost {
             font-family: 'G600';
             font-size: 10px;
             line-height: 30px;
+
+            @media (max-width: 375px) {
+                font-size: calc(10 / 16 * 1rem);
+            }
         }
     }
 

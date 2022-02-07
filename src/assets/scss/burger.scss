@@ -6,6 +6,10 @@
     border: 0;
     z-index: 10;
 
+    @media (max-width: 375px) {
+        padding: calc(5 * 100vw / 375) 0 calc(11 * 100vw / 375);
+    }
+
 
     .toggler-icon {
         display: inline-block;
@@ -14,6 +18,11 @@
         height: 2px;
         background: $black;
         transition: $t-ease;
+
+        @media (max-width: 375px) {
+            width: calc(32 * 100vw / 375);
+            height: calc(2 * 100vw / 375);
+        }
 
         &:before,
         &:after {
@@ -25,10 +34,20 @@
             left: 0;
             top: -10px;
             transition: $t-ease;
+
+            @media (max-width: 375px) {
+                width: calc(32 * 100vw / 375);
+                height: calc(2 * 100vw / 375);
+                top: calc(-10 * 100vw / 375) solid #EBF2F8;
+            }
         }
 
         &:after {
             top: 10px;
+
+            @media (max-width: 375px) {
+                top: calc(10 * 100vw / 375);
+            }
         }
     }
 

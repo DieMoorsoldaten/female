@@ -1,37 +1,67 @@
-.header-main{
+.header-main {
     background: url(/assets/img/header.png) no-repeat;
     background-position: bottom;
     background-size: cover;
 
+    @media ($md) {
+        background: url(/assets/img/header768.png) no-repeat;
+        background-size: 100%;
+        min-height: 887px;
+        background-position: bottom;
+    }
+
+    @media ($xl) {
+        background: url(/assets/img/header3.png) no-repeat;
+        background-size: 100%;
+        min-height: 887px;
+        background-position: center bottom;
+        background-size: cover;
+    }
+
     min-height: 695px;
     padding: 32px 0;
 
-    h1{
+    @media (max-width: 375px) {
+        min-height: calc(695 * 100vw / 375);
+        padding: calc(32 * 100vw / 375) 0;
+    }
+
+    h1 {
         font-size: 68px;
         line-height: 68px;
         font-family: 'Druk';
         color: $rose;
 
-        @media (max-width: 375px){
-            font-size: calc( 68 * 100vw /375 );
-            line-height: calc( 68 * 100vw /375 );
+        @media (max-width: 375px) {
+            font-size: calc(68 / 16 * 1rem);
+            line-height: calc(68 / 16 * 1rem);
+        }
+
+        @media ($md) {
+            font-size: 92px;
+            line-height: 86px;
         }
     }
 
-    p{
+    p {
         font-family: 'G300';
         font-size: 25px;
         line-height: 25px;
         color: $white;
         margin-bottom: 32px;
 
-        @media (max-width: 375px){
-            font-size: calc( 25 * 100vw /375 );
-            line-height: calc( 25 * 100vw /375 );
+        @media (max-width: 375px) {
+            font-size: calc(25 / 16 * 1rem);
+            line-height: calc(25 / 16 * 1rem);
+            margin-bottom: calc(32 / 16 * 1rem);
+        }
+
+        @media ($md) {
+            margin-bottom: 38px;
         }
     }
 
-    a{
+    a {
         color: $black;
         font-size: 16px;
         text-decoration: none;
@@ -40,9 +70,23 @@
         display: inline-block;
         padding: 17px 29px;
         border-radius: 8px;
+        transition: $t-ease;
 
-        &:focus{
-            color: $black;
+        @media (max-width: 375px) {
+            font-size: calc(16 / 16 * 1rem);
+            padding: calc(17 * 100vw / 375) calc(29 * 100vw / 375);
+
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                background: $white;
+            }
         }
     }
+
+    &:focus {
+        color: $black;
+    }
+
 }

@@ -1,0 +1,13 @@
+.subscribe{
+
+    a rect{
+        transition: $t-ease;
+    }
+
+    @media (min-width: 992px) {
+        a:hover rect{
+
+            fill: $rose;
+        }
+    }
+}

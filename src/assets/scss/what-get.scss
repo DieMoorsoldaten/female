@@ -1,0 +1,73 @@
+.what-get{
+    padding-top: 164px;
+    color: $white;
+    background: $rose;
+
+    @media (max-width: 375px) {
+        padding-top: calc( 164 * 100vw / 375);
+    }
+
+    @media ($md) {
+        padding-top: 222px;
+    }
+
+    @media ($md) {
+        padding-top: 254px;
+    }
+
+    h2{
+        font-family: 'Druk';
+        font-size: 80px;
+        line-height: 80px;
+        margin-bottom: 32px;
+        padding: 0 16px;
+
+        @media (max-width: 375px) {
+            font-size: calc(80 / 16 * 1rem);
+            line-height: calc(80 / 16 * 1rem);
+            margin-bottom: calc( 32 * 100vw / 375);
+            padding: 0 calc( 16 * 100vw / 375);
+        }
+
+        @media ($md) {
+            margin-bottom: 64px;
+        }
+
+        @media ($xl) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &-descr {
+        font-family: 'G600';
+        font-size: 16px;
+        line-height: 25px;
+        text-align: justify;
+        padding: 0 16px 32px;
+
+        @media (max-width: 375px) {
+            font-size: calc(16 / 16 * 1rem);
+            line-height: calc(25 / 16 * 1rem);
+            padding: 0 calc( 16 * 100vw / 375) calc( 32 * 100vw / 375);
+        }
+
+        @media ($md) {
+            padding-top: 30px;
+        }
+
+        @media ($xl) {
+            padding-top: 10px;
+        }
+    }
+
+    img{
+        width: 100%;
+    }
+
+    @media ($xl) {
+        figure{
+            margin-top: 10px;
+        }
+    }
+    
+}

@@ -3,10 +3,24 @@
     padding-top: 32px;
     color: $dark;
 
+    @media (max-width: 375px) {
+        padding-top: calc(32 * 100vw / 375);
+    }
+
+    @media ($xl) {
+        padding-top: 75px;
+    }
+
     h2 {
         font-size: 92px;
         margin-bottom: 24px;
         font-family: 'Druk';
+
+        @media (max-width: 375px) {
+            margin-bottom: calc(24 * 100vw / 375);
+            font-size: calc(92 / 16 * 1rem);
+        }
+
     }
 
     h4 {
@@ -14,13 +28,42 @@
         line-height: 44px;
         font-family: 'G600';
         margin-bottom: 32px;
+
+        @media (max-width: 375px) {
+            margin-bottom: calc(32 * 100vw / 375);
+            font-size: calc(28 / 16 * 1rem);
+            line-height: calc(44 / 16 * 1rem);
+        }
+
+        @media ($xl) {
+            margin-bottom: 60px;
+        }
     }
 
-    p{
+    p {
         font-family: 'G400';
         font-size: 16px;
         line-height: 25px;
         margin-bottom: 34px;
+
+        @media (max-width: 375px) {
+            margin-bottom: calc(34 * 100vw / 375);
+            font-size: calc(16 / 16 * 1rem);
+            line-height: calc(25 / 16 * 1rem);
+
+        }
+
+        @media ($md) {
+            &:last-child {
+                margin-bottom: 91px;
+            }
+        }
+
+        @media ($xl) {
+            &:last-child {
+                margin-bottom: 49px;
+            }
+        }
     }
 
 }

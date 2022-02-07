@@ -2,19 +2,42 @@
 
     padding: 96px 0;
 
+    @media (max-width: 375px) {
+        margin: calc(96 * 100vw / 375) 0;
+    }
+
+    @media ($xl){
+        padding: 96px 0 124px;
+    }
+
     h3 {
         font-family: 'Druk';
         font-size: 64px;
         margin-bottom: 58px;
+
+        @media (max-width: 375px) {
+            font-size: calc(64 / 16 * 1rem);
+            margin-bottom: calc(58 * 100vw / 375);
+        }
     }
 
     svg{
         display: block;
         margin: 0 auto 14px;
+
+        @media (max-width: 375px) {
+            margin: 0 auto calc(14 * 100vw / 375);
+
+        }
     }
 
     &-top{
         margin-bottom: 113px;
+
+        @media (max-width: 375px) {
+            margin-bottom: calc(113 * 100vw / 375);
+
+        }
     }
 
     &-top>div{
@@ -22,10 +45,21 @@
         max-width: 350px;
         margin: 0 auto;
 
+        @media (max-width: 375px) {
+            padding: calc(20 * 100vw / 375);
+
+        }
+
         p{
             font-family: 'G400';
             font-size: 16px;
             line-height: 21px;
+
+            @media (max-width: 375px) {
+                font-size: calc(16 / 16 * 1rem);
+                line-height: calc(21 / 16 * 1rem);
+    
+            }
         }
     }
 }

@@ -9,6 +9,23 @@
         line-height: 43px;
         font-family: 'Druk';
         color: $white;
+
+        @media (max-width: 375px) {
+            font-size: calc(43 / 16 * 1rem);
+            line-height: calc(43 / 16 * 1rem);
+            padding: calc(32 * 100vw / 375) 0;
+        }
+
+        @media ($md) {
+            font-size: 46px;
+            line-height: 51px;
+        }
+
+        @media ($xl) {
+            font-size: 64px;
+            line-height: 70px;
+            padding: 75px 0;
+        }
     }
 
     span{

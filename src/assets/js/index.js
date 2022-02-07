@@ -27,40 +27,50 @@ function handleClassNameForAnimation(list, className, offset) {
 //     '.main-heading p',
 //     '.main-heading li',
 // ];
-// let listElForAnim_2 = [
-//     '.main-section h3',
-//     '.main-image img',
-//     '.main-article h2',
-//     '.main-section p',
-//     '.main-heading p',
-//     '.main-heading li',
-//     '.main-section-map'
-// ];
+let listElForAnim_2 = [
+    '.anime h2',
+    '.anime h3',
+    '.anime h4',
+    '.anime h5',
+    '.anime p',
+    '.anime label',
+    '.anime button',
+    '.anime select',
+    '.anime a',
+    '.anime img',
+];
 // let listElForAnim_3 = [ 
 
 // ]; 
 
 // handleClassNameForAnimation(listElForAnim_1, 'fadeInUp', 50);
-// handleClassNameForAnimation(listElForAnim_2, 'fadeIn', 100);
+handleClassNameForAnimation(listElForAnim_2, 'fadeIn', 100);
 // handleClassNameForAnimation(listElForAnim_3, 'widthIn', 50);
 
-// document.addEventListener('DOMContentLoaded', () => {
+$(document).ready(function () {
+    $(".burger").click(function () {
+        $('.header').toggleClass("btn-active");
+        $('body').toggleClass("menu-fixed");
+    });
+});
 
-//     let toTopBtn = document.querySelector('.to-up');
+document.addEventListener('DOMContentLoaded', () => {
 
-//     window.onscroll = function () {
-//         if (window.pageYOffset > 580) {
-//             toTopBtn.style.display = 'block';
-//         } else {
-//             toTopBtn.style.display = 'none';
-//         }
-//     }
+    let toTopBtn = document.querySelector('.to-up');
 
-//     // плавный скролл наверх 
-//     toTopBtn.addEventListener('click', function () {
-//         window.scrollBy({
-//             top: -document.documentElement.scrollHeight,
-//             behavior: 'smooth'
-//         });
-//     });
-// });
+    window.onscroll = function () {
+        if (window.pageYOffset > 580) {
+            toTopBtn.style.display = 'block';
+        } else {
+            toTopBtn.style.display = 'none';
+        }
+    }
+
+    // плавный скролл наверх 
+    toTopBtn.addEventListener('click', function () {
+        window.scrollBy({
+            top: -document.documentElement.scrollHeight,
+            behavior: 'smooth'
+        });
+    });
+});

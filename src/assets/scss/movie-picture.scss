@@ -1,6 +1,10 @@
 .movie-picture {
     background: $rose;
 
+    @media ($xl) {
+        background: transparent;
+    }
+
     img{
         object-position: right top;
         margin-left: auto;

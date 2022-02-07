@@ -3,14 +3,35 @@
     padding-top: 64px;
     color: $dark;
 
+    @media (max-width: 375px) {
+        margin-bottom: calc(64 * 100vw / 375);
+
+    }
+
     h3{
         font-size: 64px;
         font-family: 'Druk';
+        margin-bottom: 16px;
 
-        &>p{
+        @media (max-width: 375px) {
+            font-size: calc(64 / 16 * 1rem);
+            margin-bottom: calc(16 * 100vw / 375);
+        }
+
+        @media ($md) {
+            margin-bottom: 58px;
+        }
+
+        &+p{
             font-size: 22px;
             line-height: 30px;
             font-family: 'G400';
+
+            @media (max-width: 375px) {
+                font-size: calc(22 / 16 * 1rem);
+                line-height: calc(30 / 16 * 1rem);
+            }
+
         }
     }
 
@@ -18,10 +39,26 @@
 
         padding-top: 32px;
 
+        @media (max-width: 375px) {
+            padding-top: calc(34 * 100vw / 375);
+
+        }
+
+        @media ($md) {
+            padding-top: 102px;
+        }
+
         h4{
             font-family: 'G600';
             font-size: 22px;
             margin-bottom: 12px;
+
+            @media (max-width: 375px) {
+                margin-bottom: calc(12 * 100vw / 375);
+                font-size: calc(22 / 16 * 1rem);
+    
+            }
+
         }
 
         p{
@@ -29,6 +66,20 @@
             font-size: 18px;
             line-height: 30px;
             margin-bottom: 32px;
+
+            @media (max-width: 375px) {
+                margin-bottom: calc(32 * 100vw / 375);
+                font-size: calc(18 / 16 * 1rem);
+                line-height: calc(30 / 16 * 1rem);
+            }
+
+            @media ($md) {
+                width: 80%;
+            }
+
+            @media ($xl) {
+                width: 100%;
+            }
         }
     }
 }

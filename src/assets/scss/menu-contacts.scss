@@ -3,23 +3,49 @@
     &>div{
         border: 2px solid $violet;
         border-radius: 4px;
-        min-height: 110px;
+        height: 110px;
         box-sizing: border-box;
         padding: 0;
         flex: 0 1 50%;
+
+        @media (max-width: 375px) {
+            border: calc( 2 * 100vw / 375) solid $violet;
+            border-radius: calc( 4 * 100vw / 375);
+            height: calc( 110 * 100vw / 375);
+        }
     }
 
     div+div{
         margin-left: 14px;
+
+        @media (max-width: 375px) {
+            margin-left: calc( 14 * 100vw / 375);
+        }
     }
 
     svg{
         display: block;
-        margin: 0 auto;
+        margin: 0 auto 8px;
+
+        @media (max-width: 375px) {
+            margin: 0 auto calc( 18 * 100vw / 375);
+        }
     }
 
     a, p{
         font-family: 'G400';
         font-size: 11px;
+
+        @media (max-width: 375px) {
+            font-size: calc(11 / 16 * 1rem);
+        }
+    }
+
+    a{
+        margin-bottom: 6px;
+
+        @media (max-width: 375px) {
+            margin-bottom: ( 6 * 100vw / 375);
+        }
     }
 }
