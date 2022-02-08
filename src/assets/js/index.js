@@ -22,31 +22,6 @@ function handleClassNameForAnimation(list, className, offset) {
     }
 }
 
-// let listElForAnim_1 = [
-//     '.main-section p',
-//     '.main-heading p',
-//     '.main-heading li',
-// ];
-let listElForAnim_2 = [
-    '.anime h2',
-    '.anime h3',
-    '.anime h4',
-    '.anime h5',
-    '.anime p',
-    '.anime label',
-    '.anime button',
-    '.anime select',
-    '.anime a',
-    '.anime img',
-];
-// let listElForAnim_3 = [ 
-
-// ]; 
-
-// handleClassNameForAnimation(listElForAnim_1, 'fadeInUp', 50);
-handleClassNameForAnimation(listElForAnim_2, 'fadeIn', 100);
-// handleClassNameForAnimation(listElForAnim_3, 'widthIn', 50);
-
 $(document).ready(function () {
     $(".burger").click(function () {
         $('.header').toggleClass("btn-active");
@@ -66,11 +41,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // плавный скролл наверх 
     toTopBtn.addEventListener('click', function () {
         window.scrollBy({
             top: -document.documentElement.scrollHeight,
             behavior: 'smooth'
         });
     });
+});
+
+jQuery("document").ready(function($){
+ 
+	var nav = $('.nav-container');
+ 
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 136) {
+			nav.addClass("f-nav");
+		} else {
+			nav.removeClass("f-nav");
+		}
+	});
+ 
 });

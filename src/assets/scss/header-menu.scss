@@ -18,6 +18,11 @@
         height: 1133px;
     }
 
+    @media ($md) and (max-width: 991px) and (max-height: 1132px) {
+        height: 100vh;
+        overflow-y: auto;
+    }
+
     @media (min-width: 992px) {
         height: 76px;
     }
